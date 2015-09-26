@@ -11,14 +11,14 @@
  * file per style scope.
  */
 
-$body-bg: #f0f0f0;
+$body-bg: #fff;
 $border-radius-base: 0;
 $border-radius-small: 0;
 $border-radius-large: 0;
 $navbar-height: 30px;
 $navbar-border-radius: 0;
 $navbar-default-border: transparent;
-$navbar-default-bg: #fff; //rgba(255,111,111,.5);
+$navbar-default-bg: #f8f8f8; //rgba(255,111,111,.5);
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
