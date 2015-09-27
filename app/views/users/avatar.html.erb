@@ -1,0 +1,5 @@
+<%= form_for current_user, url: user_path(current_user), html: { multipart: true } do |f| %>
+  <%= image_tag current_user.avatar.url(:thumb), title: "用户头像" %>
+  <%= f.file_field :avatar %>
+  <%= f.submit "修改" %>
+<% end %>

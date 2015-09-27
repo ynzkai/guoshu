@@ -1,5 +1,5 @@
 # User
-  username, email, password, role, agreement, avatar
+  username, email, password, admin, agreement, avatar
 
 # UserDetail
   address, zipcode, telephone, weixin, qq
