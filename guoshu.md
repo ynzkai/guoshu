@@ -1,8 +1,8 @@
 # User
-  username, email, password, admin, agreement, avatar
+  username, email, password, admin, avatar
 
 # UserDetail
-  address, zipcode, telephone, weixin, qq
+  address, zipcode, telephone, weixin, qq, intro
 
 # Picture
   多态
@@ -23,6 +23,9 @@
 
 # Order
   title, state, total, address, telephone
+
+# Reciever
+  address, telephone, name
 
 # Cart
 
