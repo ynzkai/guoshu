@@ -1,5 +1,13 @@
-<%= form_for current_user, url: user_path(current_user), html: { multipart: true } do |f| %>
-  <%= image_tag current_user.avatar.url(:thumb), title: "用户头像" %>
-  <%= f.file_field :avatar %>
-  <%= f.submit "修改" %>
-<% end %>
+<div class="container">
+  <%= form_for current_user, html: { multipart: true } do |f| %>
+    <%= image_tag current_user.avatar.url(:thumb), title: "用户头像" %>
+	<div class="form-group">
+	  <p class="help-block">请选择要上传的头像文件</p>
+      <%= f.file_field :avatar %>
+	</div >
+
+	<div class="form-group">
+      <%= f.submit "修改", class: "btn btn-default btn-lg" %>
+	</div>
+  <% end %>
+</div>
