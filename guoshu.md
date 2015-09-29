@@ -13,7 +13,7 @@
   title, content
 
 # Product
-  name, description, price, unit, count
+  name, description, price, unit, amount
 
 # Catalog
   name
