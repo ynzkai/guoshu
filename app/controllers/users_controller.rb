@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:update, :avatar]
 
   def index
+    @users = User.all.reverse
   end
 
   def show
