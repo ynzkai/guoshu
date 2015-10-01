@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
-  resources :products
+  get 'pictures/new'
+
+  get 'pictures/create'
+
+  get 'pictures/destroy'
+
   root 'home#index'
 
   devise_for :users
   resources :users, only: [:index, :update, :show]
 
+  resources :products do
+    resources :pictures, only: [:new]
+  end
+  resources :pictures, only: [:show, :create, :destroy]
 
   get 'avatar', to: "users#avatar"
 

@@ -1,0 +1,14 @@
+<h1>Pictures#new</h1>
+<p>Find me in app/views/pictures/new.html.erb</p>
+
+<%= form_for @picture, html: { multipart: true } do |f| %>
+  <%= f.hidden_field :product_id %>
+  <div class="field">
+    <%= f.label :pic %><br>
+    <%= f.file_field :pic %>
+  </div>
+
+  <div class="field">
+    <%= f.submit 'upload' %>
+  </div>
+<% end %>
