@@ -15,7 +15,6 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-    @product.pictures.build
   end
 
   # GET /products/1/edit
@@ -70,6 +69,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :price, :unit, :amount, :pic)
+      params.require(:product).permit(:name, :description, :price, :unit, :amount, :pic, :catalog_id)
     end
 end

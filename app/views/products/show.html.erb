@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div class="thumbnail">
+  <% @product.pictures.each do |p| %>
+	<%= image_tag p.pic.url(:big) %>
+  <% end %>
+</div>
+
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
