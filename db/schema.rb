@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929063400) do
+ActiveRecord::Schema.define(version: 20150930161030) do
 
   create_table "catalogs", force: :cascade do |t|
     t.integer  "parent_id"
@@ -22,6 +22,28 @@ ActiveRecord::Schema.define(version: 20150929063400) do
   end
 
   add_index "catalogs", ["parent_id"], name: "index_catalogs_on_parent_id"
+
+  create_table "pictures", force: :cascade do |t|
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "product_id"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+  end
+
+  add_index "pictures", ["product_id"], name: "index_pictures_on_product_id"
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "unit"
+    t.integer  "amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

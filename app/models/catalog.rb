@@ -1,6 +1,7 @@
 class Catalog < ActiveRecord::Base
   has_many :subcatalogs, class_name: Catalog, foreign_key: "parent_id" 
   belongs_to :parent, class_name: Catalog
+  has_many :products
 
   def self.get(cata)
     result ||= []

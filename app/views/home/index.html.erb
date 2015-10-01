@@ -1,5 +1,13 @@
 <div class="container">
-  <ul>
-    <%= get_catalogs_html('分类').html_safe %>
-  </ul>
+  <div class="row">
+	<div class="col-md-2">
+      <ul>
+        <%= get_catalogs_html('分类').html_safe %>
+      </ul>
+    </div>
+
+	<div class="col-md-10">
+	  <%= render @products %>
+	</div>
+  </div>
 </div>
