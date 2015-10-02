@@ -1,11 +1,25 @@
 <div class="container">
-  <div class="row">
-	<div class="col-md-2">
-      <ul>
-        <%= get_catalogs_html('分类').html_safe %>
-      </ul>
-    </div>
+  <div class="row head-bar">
+	<div class="col-md-2 logo">
+	  [the logo]
+	</div>
+	<div class="col-md-10 info">
+	</div>
+  </div>
 
+  <div class="row nav-strap">
+  </div>
+
+  <div class="row">
+	<div class="col-md-2 catalog">
+      <%= get_catalogs_html('分类').html_safe %>
+    </div>
+	
+	<div class="col-md-10 poster">
+	</div>
+  </div>
+
+  <div class="row">
 	<div class="col-md-10">
 	  <%= render @products %>
 	</div>
