@@ -7,7 +7,16 @@
 	</div>
   </div>
 
-  <div class="row nav-strap">
+  <div class="row nav-strip">
+	<div class="col-md-12">
+	  <ul>
+	    <li><a href="#">分类</a></li>
+	    <li><a href="#">首页</a></li>
+	    <li><a href="#">组合区</a></li>
+	    <li><a href="#">推荐区</a></li>
+	    <li><a href="#">折扣区</a></li>
+	  </ul>
+	</div>
   </div>
 
   <div class="row">
@@ -35,8 +44,66 @@
 
   </div>
 
+
   <div class="row">
-	<div class="col-md-10">
+	<div class="col-md-12 head-strip">
+	  <div class="wrapper clearfix">
+	    <a href="#" class="pull-left">水果</a>
+	    <a href="#" class="more pull-right">更多</a>
+	  </div>
+    </div>
+  </div>
+
+  <div class="row">
+	<div class="col-md-12 wrapper">
+	  <%= render @products %>
+	</div>
+  </div>
+
+
+  <div class="row">
+	<div class="col-md-12 head-strip">
+	  <div class="wrapper clearfix">
+	    <a href="#" class="pull-left">蔬菜</a>
+	    <a href="#" class="more pull-right">更多</a>
+	  </div>
+    </div>
+  </div>
+
+  <div class="row">
+	<div class="col-md-12 wrapper">
+	  <%= render @products %>
+	</div>
+  </div>
+
+
+  <div class="row">
+	<div class="col-md-12 head-strip">
+	  <div class="wrapper clearfix">
+	    <a href="#" class="pull-left">肉类</a>
+	    <a href="#" class="more pull-right">更多</a>
+	  </div>
+    </div>
+  </div>
+
+  <div class="row">
+	<div class="col-md-12 wrapper">
+	  <%= render @products %>
+	</div>
+  </div>
+
+
+  <div class="row">
+	<div class="col-md-12 head-strip">
+	  <div class="wrapper clearfix">
+	    <a href="#" class="pull-left">海鲜</a>
+	    <a href="#" class="more pull-right">更多</a>
+	  </div>
+    </div>
+  </div>
+
+  <div class="row">
+	<div class="col-md-12 wrapper">
 	  <%= render @products %>
 	</div>
   </div>

@@ -23,8 +23,8 @@ $(function() {
 		nextText: '<span class="glyphicon glyphicon-chevron-right"></span>',
 		pager: true,
 		nav: true,
-		fade: 500,
 		pause: true,
+		speed: 500,
 		namespace: "btns"
 	});
 });

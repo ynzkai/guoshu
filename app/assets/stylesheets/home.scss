@@ -10,27 +10,40 @@
 
 .head-bar {
 	height: 100px;
-	background-color: #fcc;
+	padding: 0 15px;
 	.logo {
-		background-color: #ccc;
+		background-color: #bfc;
 		height: 100%;
 	}
 
 	.info {
+		background-color: #bfc;
 		height: 100%;
 	}
 }
 
-.nav-strap {
+.nav-strip {
 	height: 30px;
-	background-color: #f88;
+	line-height: 30px;
+	//background-color: #8f8;
+	ul {
+		list-style: none;
+		border-bottom: 3px solid #333;
+		li {
+			display: inline-block;
+			width: 100px;
+			text-align: center;
+			font-size: 1.1em;
+			letter-spacing: 2px;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .catalog {
-	background-color: #bc8;
 	margin: 0;
-	padding: 0;
-	position: relative;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -38,22 +51,24 @@
 	}
 
 	& > ul {
+		position: relative;
 		& > li {
-			background-color: #ff8;
+			border-bottom: 1px solid #555;
+			background-color: #333;
 			height: 30px;
 			line-height: 30px;
 			font-size: 1.2em;
 			letter-spacing: 0.8em;
-			margin-left: 50px;
 			& > a {
 				text-decoration: none;
 				display: block;
 			}
+			// 弹出分类菜单
 			& > ul {
 				display: none;
 				position: absolute;
 				z-index: 999;
-				background-color: #88f;
+				background-color: rgba(215,215,215,.8);
 				width: 250px;
 				height: 100%;
 				left: 100%;
@@ -66,7 +81,7 @@
 				}
 			}
 			&:hover {
-				background-color: #f8b;
+				background-color: #999;
 			}
 			&:hover > ul {
 				display: block;
@@ -110,10 +125,9 @@
   width: 100%;
   border: 0;
   }
+
 .poster {
-	padding: 0;
 	height: 300px;
-	background-color: #fc8;
 	overflow: hidden;
 	position: relative;
 	&:hover .btns_nav {
@@ -163,5 +177,24 @@ ul.btns_tabs {
 	}
 	.btns_here {
 		background-color: #000;
+	}
+}
+
+// product area style
+
+.head-strip {
+	margin-top: 50px;
+	.wrapper {
+		border-bottom: 2px solid #333;
+		position: relative;
+		a {
+			font-size: 1.5em;
+		}
+		.more {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			font-size: 1em;
+		}
 	}
 }
