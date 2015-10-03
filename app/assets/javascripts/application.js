@@ -11,7 +11,20 @@
 // about supported directives.
 //
 //= require jquery
+//= require responsiveslides.min
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+    $(".poster .rslides").responsiveSlides({
+		prevText: '<span class="glyphicon glyphicon-chevron-left"></span>',
+		nextText: '<span class="glyphicon glyphicon-chevron-right"></span>',
+		pager: true,
+		nav: true,
+		fade: 500,
+		pause: true,
+		namespace: "btns"
+	});
+});
