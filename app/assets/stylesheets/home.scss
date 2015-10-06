@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container {
-	& > div {
+	& > .row {
 		margin-top: 10px;
 	}
 }
@@ -11,24 +11,59 @@
 .head-bar {
 	height: 100px;
 	padding: 0 15px;
+	div {
+		background-color: #d0ffc8;
+		height: 100%;
+	}
 	.logo {
-		background-color: #bfc;
 		height: 100%;
 	}
 
+	.slogen {
+		padding-top: 30px;
+		font-size: 1.7em;
+	}
+
+	.search {
+		padding-top: 35px;
+		form {
+			position: relative;
+			width: 350px;
+			padding: 0;
+			border: 2px solid #555;
+		}
+		input {
+			height: 30px;
+			width: 100%;
+			outline: none;
+			border-width: 0;
+		}
+		button {
+			background-color: #555;
+			color: #fff;
+			position: absolute;
+			top: 0;
+			right: 0;
+			outline: none;
+			height: 30px;
+			width: 70px;
+			border-width: 0;
+		}
+	}
+
 	.info {
-		background-color: #bfc;
-		height: 100%;
+
 	}
 }
 
 .nav-strip {
 	height: 30px;
 	line-height: 30px;
+	margin-top: 30px !important;
 	//background-color: #8f8;
 	ul {
 		list-style: none;
-		border-bottom: 3px solid #333;
+		border-bottom: 2px solid #333;
 		li {
 			display: inline-block;
 			width: 100px;
@@ -37,6 +72,7 @@
 			letter-spacing: 2px;
 			a {
 				text-decoration: none;
+				font-weight: 500;
 			}
 		}
 	}
