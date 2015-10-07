@@ -1,21 +1,27 @@
 Rails.application.routes.draw do
-  get 'pictures/new'
+  get 'looks/create'
 
-  get 'pictures/create'
+  get 'looks/destroy'
 
-  get 'pictures/destroy'
+  get 'likes/create'
+
+  get 'likes/destroy'
 
   root 'home#index'
 
   devise_for :users
   resources :users, only: [:index, :update, :show]
+  get 'avatar', to: "users#avatar"
 
   resources :products do
     resources :pictures, only: [:new]
   end
   resources :pictures, only: [:show, :create, :destroy]
 
-  get 'avatar', to: "users#avatar"
+  resources :catalog, only: [:index, :show]
+
+  resources :likes, :looks, only: [:create, :destroy]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

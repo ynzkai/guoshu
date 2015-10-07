@@ -1,35 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="row">
+	<div class="col-md-12 catalog-level">
+	  <%= catalog_links(@product.catalog) %>
+	</div>
+  </div>
 
-<div class="thumbnail">
-  <% @product.pictures.each do |p| %>
-	<%= image_tag p.pic.url(:big) %>
-  <% end %>
+  <div class="row">
+	<div class="col-md-8">
+
+      <div class="thumbnail">
+        <% @product.pictures.each do |p| %>
+      	<%= image_tag p.pic.url(:big) %>
+        <% end %>
+      </div>
+
+      <div class="description">
+        <%= @product.description %>
+      </div>
+	</div>
+
+	<div class="col-md-3 product-info">
+      <div class="name">
+        <strong>名称: </strong>
+        <%= @product.name %>
+      </div>
+      
+      
+      <div class="price">
+        <strong>价格: </strong>
+		<%= "￥#{@product.price}元 / #{@product.unit}" %>
+      </div>
+           
+      <div class="amount">
+        <strong>数量: </strong>
+		<%= "#{@product.amount} #{@product.unit}" %>
+      </div>
+
+	  <hr>
+
+	  <div class="icons">
+	    <span class="glyphicon glyphicon-eye-open"></span>
+	    <span class="glyphicon glyphicon-heart"></span>
+	  </div>
+	</div>
+
+  </div>
 </div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Unit:</strong>
-  <%= @product.unit %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @product.amount %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
