@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :like, :look]
 
   # GET /products
   # GET /products.json
@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product.looks.create(user_id: current_user.id)
   end
 
   # GET /products/new
@@ -58,6 +59,20 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def like
+    like_item = @product.likes.find_by(user_id: current_user.id)
+    if like_item
+      @product.likes.destroy like_item
+    else
+      @product.likes.create(user_id: current_user.id)
+    end
+
+    @likes = @product.likes.count
+    respond_to do |format|
+      format.js
     end
   end
 

@@ -22,4 +22,21 @@
 	& > div {
 		padding-bottom: 5px;
 	}
+
+	.icons {
+		a:link {
+			color: $text-color;
+		}
+		a:hover {
+			color: lighten($text-color, 10%);
+		}
+		a:visited, a:active, a:hover {
+			text-decoration: none;
+			outline: none;
+		}
+		span {
+			margin-left: 5px;
+		}
+	}
+
 }

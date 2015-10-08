@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     #@catalogs = Catalog.all
-    @products = Product.all.limit(4).reverse
+    @products = Product.all.order(created_at: :desc).limit(4)
 
     @catalogs = {}
     parent_catalogs = Catalog.where(parent_id: Catalog.find_by(name: '分类').id)

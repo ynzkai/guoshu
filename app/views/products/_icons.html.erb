@@ -1,0 +1,15 @@
+<div class="icons">
+  <span class="glyphicon glyphicon-heart"></span>
+  <span id="looks<%= product.id %>"><%= product.looks.count %></span>
+
+  <% if user_signed_in? %>
+    <%= link_to like_product_url(product), remote: true, method: :post do %>
+      <span class="glyphicon glyphicon-heart"></span>
+    <% end %>
+  <% else %>
+    <span class="glyphicon glyphicon-heart"></span> 
+  <% end %>
+  <span id="likes<%= product.id %>"><%= product.likes.count %></span>
+
+</div>
+

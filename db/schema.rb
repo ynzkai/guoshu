@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006153053) do
+ActiveRecord::Schema.define(version: 20151008155552) do
 
   create_table "catalogs", force: :cascade do |t|
     t.integer  "parent_id"
@@ -25,18 +25,23 @@ ActiveRecord::Schema.define(version: 20151006153053) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "likes", ["product_id"], name: "index_likes_on_product_id"
+  add_index "likes", ["user_id", "product_id"], name: "index_likes_on_user_id_and_product_id", unique: true
   add_index "likes", ["user_id"], name: "index_likes_on_user_id"
 
   create_table "looks", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "looks", ["product_id"], name: "index_looks_on_product_id"
   add_index "looks", ["user_id"], name: "index_looks_on_user_id"
 
   create_table "pictures", force: :cascade do |t|
@@ -84,7 +89,6 @@ ActiveRecord::Schema.define(version: 20151006153053) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.integer  "looks_count"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

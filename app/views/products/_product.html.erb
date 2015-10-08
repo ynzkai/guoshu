@@ -4,9 +4,10 @@
 	  <%= image_tag product.pictures.first.pic.url(:medium) %>
 	<% end %>
 	<div class="caption">
-	  <h3><%= product.name %></h3>
-	  <p><%= product.description %></p>
+	  <h5><%= product.name %></h5>
+	  <p><%= truncate product.description, length: 50 %></p>
 	  <p><span><%= product.price %></span> <span><%= product.unit %></span> <span><%= product.amount %></span></p>
+	  <p><%= render 'products/icons', product: product %></p>
 	</div>
   </div>
 </div>
