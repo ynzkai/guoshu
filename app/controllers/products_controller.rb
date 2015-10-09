@@ -10,7 +10,11 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @product.looks.create(user_id: current_user.id)
+    if user_signed_in?
+      @product.looks.create(user_id: current_user.id)
+    else
+      @product.looks.create
+    end
   end
 
   # GET /products/new
