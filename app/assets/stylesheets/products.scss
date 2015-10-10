@@ -22,13 +22,25 @@
 	& > div {
 		padding-bottom: 5px;
 	}
+	.icons {
+		.like, .look {
+			color: $brand-primary;
+		}
+	}
+}
+
+.product-box {
+	background-color: #f8f8f8;
 
 	.icons {
+		.like, .look {
+			color: $brand-primary;
+		}
 		a:link {
-			color: $text-color;
+			color: $brand-primary;
 		}
 		a:hover {
-			color: lighten($text-color, 10%);
+			color: lighten($brand-primary, 10%);
 		}
 		a:visited, a:active, a:hover {
 			text-decoration: none;
@@ -38,5 +50,4 @@
 			margin-left: 5px;
 		}
 	}
-
 }

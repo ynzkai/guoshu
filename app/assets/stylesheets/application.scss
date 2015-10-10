@@ -14,9 +14,9 @@
 $font-family-base: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $brand-primary: #1b983c;
 $link-color: $brand-primary;
-$gray-base: #222;
+$gray-base: #333;
 $body-bg: #fff;
-//$text-color: #fff;
+$text-color: #222;
 //$link-color: #fff;
 //$link-hover-color: #fff;
 $border-radius-base: 0;
@@ -25,11 +25,13 @@ $border-radius-large: 0;
 $navbar-height: 25px;
 $navbar-border-radius: 0;
 $navbar-default-border: transparent;
-$navbar-default-color: #ccc;
-$navbar-default-link-color: #ccc;
+$navbar-default-color: #eee;
+$navbar-default-link-color: #eee;
 $navbar-default-link-hover-color: #fff;
 $navbar-default-link-active-color: #fff;
-$navbar-default-bg: darken($brand-primary, 15%); //rgba(255,111,111,.5);
+$navbar-default-bg: #5a7852; //rgba(255,111,111,.5);
+
+$line-color: #ccc;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

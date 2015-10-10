@@ -1,12 +1,12 @@
 <div class="col-sm-6 col-md-3">
-  <div class="thumbnail">
+  <div class="thumbnail product-box">
 	<%= link_to product_path product do %>
 	  <%= image_tag product.pictures.first.pic.url(:medium) %>
 	<% end %>
 	<div class="caption">
-	  <h5><%= product.name %></h5>
+	  <h4><%= product.name %></h4>
 	  <p><%= truncate product.description, length: 50 %></p>
-	  <p><span><%= product.price %></span> <span><%= product.unit %></span> <span><%= product.amount %></span></p>
+	  <p><span>¥ <%= product.price %> 元</span>/<span><%= product.unit %></span> <span>数量 <%= product.amount %></span></p>
 	  <p><%= render 'products/icons', product: product %></p>
 	</div>
   </div>

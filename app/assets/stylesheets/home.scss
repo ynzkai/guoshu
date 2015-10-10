@@ -12,7 +12,7 @@
 	height: 100px;
 	padding: 0 15px;
 	div {
-		background-color: #d0ffc8;
+		background-color: #e7fee1;
 		height: 100%;
 	}
 	.logo {
@@ -63,7 +63,7 @@
 	//background-color: #8f8;
 	ul {
 		list-style: none;
-		border-bottom: 2px solid #333;
+		border-bottom: 2px solid $line-color;
 		li {
 			display: inline-block;
 			width: 100px;
@@ -89,8 +89,8 @@
 	& > ul {
 		position: relative;
 		& > li {
-			border-bottom: 1px solid #555;
-			background-color: #333;
+			border-bottom: 1px solid lighten($gray-base,5%);
+			background-color: $gray-base;
 			height: 30px;
 			line-height: 30px;
 			font-size: 1.2em;
@@ -222,7 +222,7 @@ ul.btns_tabs {
 .head-strip {
 	margin-top: 50px;
 	.wrapper {
-		border-bottom: 2px solid #333;
+		border-bottom: 2px solid $line-color;
 		position: relative;
 		a {
 			font-size: 1.5em;
