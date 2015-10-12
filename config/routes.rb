@@ -16,7 +16,13 @@ Rails.application.routes.draw do
   end
   resources :pictures, only: [:show, :create, :destroy]
 
-  resources :catalog, only: [:index, :show]
+  #resources :catalog, only: [:index, :show]
+
+  resources :catalogs do
+    member do
+      get 'subcatalogs'
+    end
+  end
 
 
 
