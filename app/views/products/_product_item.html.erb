@@ -1,0 +1,21 @@
+
+<tr class="product">
+  <td><%= image_tag product.pictures.first.pic.url(:medium), class: "picture" %></td>
+  <td><%= product.name %></td>
+  <td><%= product.description %></td>
+  <td><%= product.price %></td>
+  <td><%= product.unit %></td>
+  <td><%= product.amount %></td>
+  <td id="product<%= product.id %>"><%= product.state_name %></td>
+
+  <% if ['就绪', '已下架'].include? product.state_name %>
+    <td><%= link_to '上架', add_product_path(product), method: :patch, remote: true %></td>
+  <% end %>
+  <% if '已上架' == product.state_name %>
+    <td><%= link_to '下架', down_product_path(product), method: :patch, remote: true %></td>
+  <% end %>
+
+  <td><%= link_to 'Show', product %></td>
+  <td><%= link_to 'Edit', edit_product_path(product) %></td>
+  <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

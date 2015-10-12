@@ -51,3 +51,15 @@
 		}
 	}
 }
+
+.products-list {
+	.product {
+		.picture {
+			width: 100px;
+			height: 100px;
+		}
+		td {
+			max-width: 500px;
+		}
+	}
+}

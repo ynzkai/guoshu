@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :state, value: 0 %>
+
   <div class="field">
     <%= f.label :catalog %><br>
 	<%= f.select :catalog_id, options_from_collection_for_select(Catalog.where(is_parent: false), "id", "name") %>

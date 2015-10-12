@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     member do
       post 'like'
       post 'look'
+      patch 'add'
+      patch 'down'
     end
   end
   resources :pictures, only: [:show, :create, :destroy]

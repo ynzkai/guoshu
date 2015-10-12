@@ -6,6 +6,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new picture_params
     if @picture.save
+      @picture.product.update(state: 1) # change product state 
       redirect_to root_url
     end
   end
