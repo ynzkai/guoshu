@@ -1,1 +1,1 @@
-$("#product<%= @product.id %>").html("<%= @product.state_name %>")
+$("#product<%= @product.id %>").replaceWith("<%= j render 'product_item', product: @product %>")
