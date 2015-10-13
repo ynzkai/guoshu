@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// product show page css
 .catalog-level {
 	font-size: 1.2em;
 	a {
@@ -17,11 +18,10 @@
 .product-info {
 	font-size: 1.1em;
 	line-height: 2;
+	padding: 20px;
 	//border: 1px solid #ddd;
 	background-color: #f8f8f8;
-	& > div {
-		padding-bottom: 5px;
-	}
+	padding-bottom: 5px;
 	.icons {
 		.like, .look {
 			color: $brand-primary;
@@ -29,6 +29,23 @@
 	}
 }
 
+.buy {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #f8f8f8;
+	#buycount {
+		width: 90px;
+		height: 40px;
+	}
+	.buy-buttons {
+		margin-top: 20px;
+		.buy-button {
+			width: 150px;
+		}
+	}
+}
+
+// product box css
 .product-box {
 	background-color: #f8f8f8;
 
@@ -52,6 +69,7 @@
 	}
 }
 
+//product list css
 .products-list {
 	.product {
 		.picture {

@@ -21,27 +21,39 @@
       </div>
 	</div>
 
-	<div class="col-md-3 product-info">
-      <div class="name">
-        <strong>名称: </strong>
-        <%= @product.name %>
-      </div>
-      
-      
-      <div class="price">
-        <strong>价格: </strong>
-		<%= "￥#{@product.price}元 / #{@product.unit}" %>
-      </div>
-           
-      <div class="amount">
-        <strong>数量: </strong>
-		<%= "#{@product.amount} #{@product.unit}" %>
-      </div>
+	<div class="col-md-4">
+	  <div class="product-info">
+        <div class="name">
+          <strong>名称: </strong>
+          <%= @product.name %>
+        </div>
+        
+        
+        <div class="price">
+          <strong>价格: </strong>
+	  	<%= "￥#{@product.price}元 / #{@product.unit}" %>
+        </div>
+             
+        <div class="amount">
+          <strong>数量: </strong>
+	  	<%= "#{@product.amount} #{@product.unit}" %>
+        </div>
 
-	  <hr>
+	    <hr>
 
-	  <%= render 'icons', product: @product %>
+	    <%= render 'icons', product: @product %>
 
+	  </div>
+
+	  <div class="buy">
+		<%= label_tag "购买数量" %>
+	    <%= number_field_tag :buycount, value: 1 %>
+
+	    <div class="buy-buttons">
+	      <p><%= link_to '立即购买', "#", class: "btn btn-default btn-lg buy-button" %></p>
+	      <p><%= link_to '加入购物车', "#", class: "btn btn-default btn-lg buy-button" %></p>
+	    </div>
+	  </div>
 	</div>
 
   </div>
