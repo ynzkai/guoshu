@@ -29,9 +29,10 @@ $navbar-default-color: #eee;
 $navbar-default-link-color: #eee;
 $navbar-default-link-hover-color: #fff;
 $navbar-default-link-active-color: #fff;
-$navbar-default-bg: #5a7852; //rgba(255,111,111,.5);
+$navbar-default-bg: #3c7e3c; //rgba(255,111,111,.5);
 
-$line-color: #ccc;
+$line-color: #ddd;
+$pannel-color: #f8f8f8;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -43,6 +44,9 @@ $line-color: #ccc;
 .navbar {
 	margin-bottom: 0;
 	font-size: 13px;
+	p {
+		padding-top: 1px;
+	}
 }
 
 .wrapper {

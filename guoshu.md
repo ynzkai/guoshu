@@ -22,7 +22,9 @@
   name
 
 # Order
-  title, state, total, address, telephone
+  state, total
+
+# OrderItem
 
 # Reciever
   address, telephone, name

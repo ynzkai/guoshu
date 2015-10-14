@@ -47,7 +47,8 @@
 
 // product box css
 .product-box {
-	background-color: #f8f8f8;
+	background-color: $pannel-color;
+	box-shadow: 0 0 3px 0 darken($pannel-color, 10%);
 
 	.icons {
 		.like, .look {

@@ -12,7 +12,7 @@
 	height: 100px;
 	padding: 0 15px;
 	div {
-		background-color: #e7fee1;
+		background-color: #e9ffd9;
 		height: 100%;
 	}
 	.logo {
@@ -30,7 +30,7 @@
 			position: relative;
 			width: 350px;
 			padding: 0;
-			border: 2px solid #555;
+			border: 2px solid $brand-primary;
 		}
 		input {
 			height: 30px;
@@ -39,7 +39,7 @@
 			border-width: 0;
 		}
 		button {
-			background-color: #555;
+			background-color: $brand-primary;
 			color: #fff;
 			position: absolute;
 			top: 0;
@@ -89,8 +89,8 @@
 	& > ul {
 		position: relative;
 		& > li {
-			border-bottom: 1px solid lighten($gray-base,5%);
-			background-color: $gray-base;
+			border-bottom: 1px solid lighten($gray-base,10%);
+			background-color: lighten($gray-base, 5%);
 			height: 30px;
 			line-height: 30px;
 			font-size: 1.2em;
@@ -104,7 +104,7 @@
 				display: none;
 				position: absolute;
 				z-index: 999;
-				background-color: rgba(215,215,215,.8);
+				background-color: rgba(255,255,255,.9);
 				width: 500px;
 				height: 100%;
 				left: 100%;
@@ -118,7 +118,7 @@
 				}
 			}
 			&:hover {
-				background-color: #999;
+				background-color: lighten($gray-base, 50%);
 			}
 			&:hover > ul {
 				display: block;
