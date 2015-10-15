@@ -46,12 +46,13 @@
 	  </div>
 
 	  <div class="buy">
+		<%= hidden_field_tag :product_id, @product.id %>
 		<%= label_tag "购买数量" %>
-	    <%= number_field_tag :buycount, value: 1 %>
+	    <%= number_field_tag :buycount, 1, min: 1, max: @product.amount %>
 
 	    <div class="buy-buttons">
 	      <p><%= link_to '立即购买', "#", class: "btn btn-default btn-lg buy-button" %></p>
-	      <p><%= link_to '加入购物车', "#", class: "btn btn-default btn-lg buy-button" %></p>
+	      <p><%= link_to '加入购物车', "#", class: "btn btn-default btn-lg addtocart-button" %></p>
 	    </div>
 	  </div>
 	</div>

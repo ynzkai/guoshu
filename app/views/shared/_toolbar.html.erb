@@ -21,7 +21,7 @@
 		  <li>
 		    <%= link_to "#" do %>
 			  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-			  <span><%= "购物车(#{3})" %></span>
+			  <span id="cart">购物车(<span id="cart_item_count"><%= current_user.cart.lineItems.count %></span>)</span>
 		    <% end %>
 		  </li>
         <li class="dropdown">
