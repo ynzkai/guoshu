@@ -24,11 +24,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :carts do
-    collection do
-      post 'addItem'
-    end
-  end
+  resources :carts
+
+  resources :line_items, only: [:create, :destroy]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

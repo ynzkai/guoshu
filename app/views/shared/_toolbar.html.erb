@@ -19,7 +19,7 @@
 	  <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
 		  <li>
-		    <%= link_to "#" do %>
+		    <%= link_to cart_path(current_user.cart) do %>
 			  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 			  <span id="cart">购物车(<span id="cart_item_count"><%= current_user.cart.lineItems.count %></span>)</span>
 		    <% end %>

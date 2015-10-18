@@ -52,7 +52,11 @@
 
 	    <div class="buy-buttons">
 	      <p><%= link_to '立即购买', "#", class: "btn btn-default btn-lg buy-button" %></p>
-	      <p><%= link_to '加入购物车', "#", class: "btn btn-default btn-lg addtocart-button" %></p>
+		  <% if user_signed_in? %>
+	        <p><%= link_to '加入购物车', "#", class: "btn btn-default btn-lg addtocart-button" %></p>
+		  <% else %>
+	        <p><%= link_to '加入购物车', new_user_session_path, class: "btn btn-default btn-lg" %></p>
+		  <% end %>
 	    </div>
 	  </div>
 	</div>

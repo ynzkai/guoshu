@@ -1,14 +1,9 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
-  
-  def addItem
-    current_user.cart.lineItems.create product_id: params[:product_id], count: params[:count]
 
-    respond_to do |format|
-      format.json
-    end
-
+  def show
+    @total = current_user.cart.lineItems.inject(0) { |sum, e| sum + e.count * e.product.price }
   end
-
+  
 end
 
