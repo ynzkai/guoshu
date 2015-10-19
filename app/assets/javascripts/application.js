@@ -33,18 +33,21 @@ $(function() {
 */
 
 $(document).ready(function() {
-  $("#owl-poster").owlCarousel({
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
-  });
+	$("#owl-slider").owlCarousel({
+
+		navigation: true, // Show next and prev buttons
+		slideSpeed: 300,
+		paginationSpeed: 400,
+		autoPlay: true,
+		stopOnHover: true,
+		navigationText: ['<span class="glyphicon glyphicon-chevron-left"></span>', '<span class="glyphicon glyphicon-chevron-right"></span>'],
+		singleItem: true
+
+		// "singleItem:true" is a shortcut for:
+		// items : 1, 
+		// itemsDesktop : false,
+		// itemsDesktopSmall : false,
+		// itemsTablet: false,
+		// itemsMobile : false
+	});
 });
