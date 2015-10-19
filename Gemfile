@@ -9,6 +9,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
+gem 'owlcarousel-rails', '~> 1.1', '>= 1.1.3.3'
 
 gem 'devise'
 gem 'cancancan', '~> 1.10'

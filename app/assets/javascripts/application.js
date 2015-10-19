@@ -11,12 +11,14 @@
 // about supported directives.
 //
 //= require jquery
-//= require responsiveslides.min
+// require responsiveslides.min
+//= require owl.carousel
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
+/* responsiveslides jQuery plugin
 $(function() {
     $(".poster .rslides").responsiveSlides({
 		prevText: '<span class="glyphicon glyphicon-chevron-left"></span>',
@@ -27,4 +29,22 @@ $(function() {
 		speed: 500,
 		namespace: "btns"
 	});
+});
+*/
+
+$(document).ready(function() {
+  $("#owl-poster").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+  });
 });
