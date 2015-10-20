@@ -56,3 +56,9 @@ $pannel-color: #f8f8f8;
 	padding: 0;
 	margin: 0;
 }
+
+.foot {
+	background-color: lighten($gray-base, 5%);
+	height: 200px;
+	margin-top: 30px;
+}

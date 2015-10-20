@@ -48,16 +48,24 @@
 
 }
 
+
 // product box css
 .product-box {
-	padding: 0;
 	background-color: $pannel-color;
 	box-shadow: 0 0 5px 0 $pannel-color;
 	border-color: darken($pannel-color, 5%);
+	overflow: hidden;
+	padding: 0;
+
+	.product-name {
+		overflow: hidden;
+	}
+	.caption {
+		color: darken($pannel-color, 60%);
+	}
 
 	.buttons {
-		height: 50px;
-		line-height: 50px;
+		padding-top: 10px;
 		border-top: 1px solid darken($pannel-color, 5%);
 		.icons {
 			span {
