@@ -1,8 +1,10 @@
 $(function () {
 	$(".addtocart-button").click(function () {
+		$product = $(this).parent(".buy").children("#product_id") ||
+				   $(this).parent().parent(".buy").children("#product_id");
 		$.post('/line_items.json', {
 				buycount: ($("#buycount").val() || 1),
-				product_id: $(this).parent(".buy").children("#product_id").val()
+				product_id: $product.val()
 			},
 			function(result, status) {
 				$("#cart_item_count").html(result.count);

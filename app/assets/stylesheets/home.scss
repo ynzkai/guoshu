@@ -2,17 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-	& > .row {
-		margin-top: 10px;
-	}
-}
-
 .head-bar {
 	height: 100px;
 	padding: 0 15px;
+	margin-top: 15px;
 	div {
-		background-color: #e9ffd9;
+		background-color: #ffffa9;
 		height: 100%;
 	}
 	.logo {
@@ -59,11 +54,12 @@
 .nav-strip {
 	height: 30px;
 	line-height: 30px;
-	margin-top: 30px !important;
+	margin: 30px 0 !important;
 	ul {
+		text-align: center;
 		list-style: none;
-		background-color: #fffb73;
-		//border-bottom: 1px solid lighten($gray-base,10%);
+		//background-color: #fffb73;
+		//border-bottom: 2px solid lighten($gray-base,50%);
 		li {
 			display: inline-block;
 			width: 100px;
@@ -71,11 +67,21 @@
 			font-size: 1.1em;
 			letter-spacing: 2px;
 			a {
+				display: block;
+				width: 100%;
+				height: 100%;
 				text-decoration: none;
 				font-weight: 500;
 			}
+			&:hover {
+				border-bottom: 3px solid lighten($gray-base,5%);
+			}
 		}
 	}
+}
+
+.main-pannel {
+	margin-bottom: 30px;
 }
 
 .catalog {
@@ -106,7 +112,7 @@
 				position: absolute;
 				z-index: 999;
 				background-color: rgba(255,255,255,.9);
-				width: 500px;
+				width: 400px;
 				height: 100%;
 				left: 100%;
 				top: 0;
@@ -201,9 +207,9 @@
 // product area style
 
 .head-strip {
-	margin-top: 50px;
+	margin: 15px 0;
 	.wrapper {
-		border-bottom: 2px solid $line-color;
+		border-bottom: 1px solid darken($pannel-color, 5%);
 		position: relative;
 		a {
 			font-size: 1.5em;
