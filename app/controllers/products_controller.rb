@@ -26,6 +26,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @parent_catalogs = Catalog.where parent: Catalog.find_by(name: '分类').id
+    @catalogs = Catalog.where parent: @parent_catalogs.first.id
   end
 
   # POST /products

@@ -55,10 +55,10 @@
 	box-shadow: 0 0 5px 0 $pannel-color;
 	border-color: darken($pannel-color, 5%);
 	overflow: hidden;
-	padding: 0;
 
-	.product-name {
+	.product-name, .product-price, .product-amount {
 		overflow: hidden;
+		height: 1.5em;
 	}
 	.caption {
 		color: darken($pannel-color, 60%);
@@ -68,8 +68,9 @@
 		padding-top: 10px;
 		border-top: 1px solid darken($pannel-color, 5%);
 		.icons {
+			height: 1.5em;
 			span {
-				padding-right: 10px;
+				padding-right: 5px;
 			}
 			.like, .look {
 				color: $brand-primary;

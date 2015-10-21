@@ -11,7 +11,7 @@
 	<tbody class="line-items">
     <% current_user.cart.lineItems.each do |l| %>
   	<tr>
-		<td><%= image_tag l.product.pictures.first.pic.url(:medium), class: "picture" %></td>
+		<td><%= image_tag l.product.pictures.first.pic.url(:small), class: "picture" %></td>
         <td><%= l.product.name %></td>
         <td><%= truncate l.product.description, length: 100 %></td>
         <td><%= l.count %></td>
