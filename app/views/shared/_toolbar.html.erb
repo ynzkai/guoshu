@@ -13,7 +13,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
-		<li><p class="navbar-text">文山果蔬网真诚为您服务</p></li>
+		<li data-no-turbolink><%= link_to "文山果蔬网用心为您服务!", root_path, class: "navbar-brand" %></li>
         <li><a href="#">关于我们</a></li>
       </ul>
 	  <% if user_signed_in? %>

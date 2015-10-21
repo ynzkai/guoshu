@@ -1,6 +1,6 @@
 <div class="col-sm-6 col-md-3">
-  <div class="thumbnail product-box" data-no-turbolink>
-	<%= link_to product_path product do %>
+  <div class="thumbnail product-box">
+	<%= link_to product_path(product) do %>
 	  <%= image_tag product.pictures.first.pic.url(:medium) %>
 	<% end %>
 	<div class="caption">

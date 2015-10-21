@@ -1,0 +1,24 @@
+<div class="container">
+  <%= render "shared/navstrip" %>
+
+  <div class="row">
+	<div class="col-md-12 catalogs">
+	  <ul>
+	    <% @catalogs.each do |k, v| %>
+			<li><%= link_to k.name, catalog_path(k) %>
+		      <ul>
+			    <% v.each do |c| %>
+				  <li>
+				    <%= link_to catalog_path(c) do %>
+					  <%= c.name %>
+					  <span class="badge"><%= c.products.count %></span>
+					<% end %>
+				  </li>
+			    <% end %>
+		      </ul>
+			</li>
+		<% end %>
+	  </ul>
+    </div>
+  </div>
+</div>

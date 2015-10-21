@@ -1,13 +1,8 @@
 class HomeController < ApplicationController
-  def index
-    #@catalogs = Catalog.all
-    @products = Product.all
+  include CatalogsHelper
 
-    @catalogs = {}
-    parent_catalogs = Catalog.where(parent_id: Catalog.find_by(name: '分类').id)
-    parent_catalogs.each do |c|
-      catalogs = Catalog.where parent_id: c.id
-      @catalogs[c] = catalogs.to_a
-    end
+  def index
+    @products = Product.all
+    @catalogs = get_catalogs
   end
 end
