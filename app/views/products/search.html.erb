@@ -1,0 +1,22 @@
+<div class="container">
+  <%= render "shared/head" %>
+
+  <div class="row">
+	<div class="col-md-12 wrapper search-result">
+	  <% unless @products.count == 0 %>
+		<div class="sort-strip">
+		  <span>为您找到 <%= @products.count %> 种商品。</span>
+		  <div class="links">
+		    <%= sort_link(@q, :name, '名称') %>
+		    <%= sort_link(@q, :catalog_id, '类型') %>
+		    <%= sort_link(@q, :created_at, '日期', default_order: :desc) %>
+		  </div>
+		</div>
+	    <%= render @products %>
+	  <% else %>
+		<h4 class="text-warning text-center"> 暂没找到您要的商品，请稍后再来看看。</h4>
+	  <% end %>
+	</div>
+  </div>
+</div>
+

@@ -29,13 +29,13 @@
 			padding: 0;
 			border: 2px solid $brand-primary;
 		}
-		input {
+		input[type="search"] {
 			height: 30px;
 			width: 100%;
 			outline: none;
 			border-width: 0;
 		}
-		button {
+		input[type="submit"] {
 			background-color: $brand-primary;
 			color: #fff;
 			position: absolute;
@@ -45,6 +45,9 @@
 			height: 30px;
 			width: 70px;
 			border-width: 0;
+			&:hover {
+				color: #ddd;
+			}
 		}
 	}
 

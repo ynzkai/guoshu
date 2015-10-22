@@ -1,5 +1,5 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
+  <%= render "shared/navstrip" %>
   
   <div class="row">
 	<div class="col-md-12 catalog-level" data-no-turbolink>
@@ -7,7 +7,7 @@
 	</div>
   </div>
 
-  <div class="row">
+  <div class="row product-detail">
 	<div class="col-md-8">
 
       <div class="thumbnail">
@@ -23,26 +23,22 @@
 
 	<div class="col-md-4">
 	  <div class="product-info">
-        <div class="name">
-          <strong>名称: </strong>
-          <%= @product.name %>
-        </div>
-        
-        
-        <div class="price">
-          <strong>价格: </strong>
-	  	<%= "￥#{@product.price}元 / #{@product.unit}" %>
-        </div>
-             
-        <div class="amount">
-          <strong>数量: </strong>
-	  	<%= "#{@product.amount} #{@product.unit}" %>
-        </div>
+	    <div class="row product-name">
+	      <div class="col-xs-3">名称:</div>
+	      <div class="col-xs-9"><%= @product.name %></div>
+	    </div>
 
-	    <hr>
+	    <div class="row product-price">
+	      <div class="col-xs-3">价格:</div>
+	      <div class="col-xs-9">¥ <%= @product.price %> 元/<%= @product.unit %></div>
+	    </div>
+
+	    <div class="row product-amount">
+	      <div class="col-xs-3">数量:</div>
+	      <div class="col-xs-9"><%= @product.amount %></div>
+	    </div>
 
 	    <%= render 'icons', product: @product %>
-
 	  </div>
 
 	  <div class="buy">
@@ -51,7 +47,7 @@
 	    <%= number_field_tag :buycount, 1, min: 1, max: @product.amount %>
 
 	    <div class="buy-buttons">
-	      <%= link_to '立即购买', "#", class: "btn btn-default btn-lg buy-button" %>
+	      <%= link_to '立即购买', "#", class: "btn btn-danger btn-lg buy-button" %>
 		  <% if user_signed_in? %>
 	        <%= link_to '加入购物车', "#", class: "btn btn-default btn-lg addtocart-button" %>
 		  <% else %>

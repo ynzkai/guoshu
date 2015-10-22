@@ -3,27 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // product show page css
-.catalog-level {
-	font-size: 1.2em;
-	a {
-		margin: 5px;
-		text-decoration: none;
-	}
-}
 
 .product-detail {
+	color: darken($pannel-color, 60%);
+
 	.description {
 		line-height: 1.5;
 	}
 
 	.product-info {
-		font-size: 1.1em;
-		line-height: 2;
-		padding: 20px;
-		//border: 1px solid #ddd;
+		padding: 15px;
 		background-color: #f8f8f8;
 		padding-bottom: 5px;
+		.product-name, .product-price, .product-amount {
+			padding-bottom: 1em;
+		}
 		.icons {
+			span {
+				padding-right: 10px;
+			}
 			.like, .look {
 				color: $brand-primary;
 			}
@@ -31,17 +29,16 @@
 	}
 
 	.buy {
-		margin-top: 20px;
-		padding: 20px;
+		margin-top: 15px;
+		padding: 15px;
 		background-color: #f8f8f8;
 		#buycount {
-			width: 90px;
-			height: 40px;
+			width: 60px;
 		}
 		.buy-buttons {
-			margin-top: 20px;
+			margin-top: 15px;
 			.buy-button {
-				width: 150px;
+				width: 130px;
 			}
 		}
 	}
@@ -52,7 +49,7 @@
 // product box css
 .product-box {
 	background-color: $pannel-color;
-	box-shadow: 0 0 5px 0 $pannel-color;
+	box-shadow: 0 0 3px 0 $pannel-color;
 	border-color: darken($pannel-color, 5%);
 	overflow: hidden;
 
@@ -104,6 +101,22 @@
 		}
 		td {
 			max-width: 500px;
+		}
+	}
+}
+
+//product search result
+.search-result {
+	.sort-strip {
+		padding: 15px;
+		color: darken($pannel-color, 60%);
+		.links {
+			display: inline-block;
+			float: right;
+			a {
+				text-decoration: none;
+				margin: 0 5px;
+			}
 		}
 	}
 }

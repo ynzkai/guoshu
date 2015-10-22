@@ -2,7 +2,7 @@
   <%= render "shared/navstrip" %>
 
   <div class="row">
-	<div class="col-md-12 catalogs">
+	<div class="col-md-12 catalogs" data-no-turbolink>
 	  <ul>
 	    <% @catalogs.each do |k, v| %>
 			<li><%= link_to k.name, catalog_path(k) %>

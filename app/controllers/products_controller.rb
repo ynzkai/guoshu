@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.unscoped.all
+    @products = Product.unscoped.all.reverse
   end
 
   # GET /products/1
@@ -96,6 +96,11 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def search
+    @q = Product.ransack(params[:q])
+    @products = @q.result.includes(:catalog)
   end
 
   private

@@ -13,6 +13,9 @@ Rails.application.routes.draw do
       patch 'add'
       patch 'down'
     end
+    collection do
+      match 'search' => 'products#search', via: [:get, :post], as: :search
+    end
   end
   resources :pictures, only: [:show, :create, :destroy]
 
