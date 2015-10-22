@@ -47,7 +47,7 @@
 	    <%= number_field_tag :buycount, 1, min: 1, max: @product.amount %>
 
 	    <div class="buy-buttons">
-	      <%= link_to '立即购买', "#", class: "btn btn-danger btn-lg buy-button" %>
+		  <%= link_to '立即购买', "#", class: "btn btn-danger btn-lg buy-button" %>
 		  <% if user_signed_in? %>
 	        <%= link_to '加入购物车', "#", class: "btn btn-default btn-lg addtocart-button" %>
 		  <% else %>

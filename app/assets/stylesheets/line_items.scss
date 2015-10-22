@@ -2,9 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.line-items {
-	img.picture {
-		width: 100px;
-		height: 100px;
+.cart {
+	th {
+		text-align: center;
+	}
+
+	.line-items {
+		img {
+			width: 100px;
+			height: 100px;
+		}
+		td {
+			max-width: 300px;
+			text-align: center;
+		}
+		td.description {
+			text-align: left;
+		}
+		#picture {
+			width: 120px;
+		}
+
 	}
 }

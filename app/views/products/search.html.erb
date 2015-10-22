@@ -8,6 +8,7 @@
 		  <span>为您找到 <%= @products.count %> 种商品。</span>
 		  <div class="links">
 		    <%= sort_link(@q, :name, '名称') %>
+		    <%= sort_link(@q, :price, '价格') %>
 		    <%= sort_link(@q, :catalog_id, '类型') %>
 		    <%= sort_link(@q, :created_at, '日期', default_order: :desc) %>
 		  </div>
