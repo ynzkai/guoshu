@@ -6,13 +6,14 @@
 	<div class="col-md-2 catalog" data-no-turbolink>
 	  <ul>
 	    <% @catalogs.each do |k, v| %>
-			<li><%= link_to k.name, catalog_path(k) %>
-		      <ul>
-			    <% v.each do |c| %>
+		  <li>
+			<%= link_to k.name, catalog_path(k) %>
+		    <ul>
+		      <% v.each do |c| %>
 				  <li><%= link_to c.name, catalog_path(c) %></li>
-			    <% end %>
-		      </ul>
-			</li>
+		      <% end %>
+		    </ul>
+		  </li>
 		<% end %>
 	  </ul>
     </div>

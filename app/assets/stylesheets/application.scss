@@ -43,11 +43,19 @@ $pannel-color: #f8f8f8;
 @import "animate.min";
 @import "owl.carousel";
 
+
+@mixin myTransition($a, $s) {
+	transition: $a $s;
+	-webkit-transition:  $a $s;
+	-moz-transition: $a $s;
+	-ms-transition: $a $s;
+	-o-transition: $a $s;
+}
+
 @import "home";
 @import "products";
 @import "line_items";
 @import "catalogs";
-
 
 .navbar {
 	margin-bottom: 0;

@@ -89,6 +89,7 @@
 	margin-bottom: 30px;
 }
 
+
 .catalog {
 	margin: 0;
 	padding-right: 0;
@@ -108,8 +109,11 @@
 			font-size: 1.2em;
 			letter-spacing: 0.8em;
 			& > a {
+				text-indent: 1.5em;
 				text-decoration: none;
 				display: block;
+
+				@include myTransition(text-indent, 1s);
 			}
 			// 弹出分类菜单
 			& > ul {
@@ -129,8 +133,9 @@
 
 				}
 			}
-			&:hover {
-				background-color: lighten($gray-base, 50%);
+			&>a:hover {
+				text-indent: 3em;
+				background-color: lighten($gray-base, 60%);
 			}
 			&:hover > ul {
 				display: block;
