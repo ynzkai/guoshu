@@ -1,4 +1,6 @@
 class LineItemsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     item = current_user.cart.lineItems.find_by product_id: params[:product_id]
     unless item

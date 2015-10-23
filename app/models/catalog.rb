@@ -1,4 +1,6 @@
 class Catalog < ActiveRecord::Base
+  validates :name, presence: true
+
   has_many :subcatalogs, class_name: Catalog, foreign_key: "parent_id" 
   belongs_to :parent, class_name: Catalog
   has_many :products

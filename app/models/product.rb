@@ -1,4 +1,9 @@
 class Product < ActiveRecord::Base
+  validates :name, :description, :price, :unit, :amount, presence: true
+  validates :name, length: {maximum: 50}
+  validates :unit, length: {maximum: 3}
+  validates :price, :amount, numericality: true
+
   has_many :pictures, dependent: :destroy
   belongs_to :catalog
   has_many :likes, dependent: :destroy

@@ -1,4 +1,6 @@
 class CatalogsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show, :subcatalogs]
+
   include CatalogsHelper
 
   def index
@@ -15,6 +17,7 @@ class CatalogsController < ApplicationController
     end
   end
 
+  # The method used to get sub-catalogs acording to parent catalog in ajax way.
   def subcatalogs
     @catalogs = Catalog.where parent: params[:id]
     respond_to do |format|
