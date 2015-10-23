@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.scrollTo.min
 //= require_tree .
 
 /* responsiveslides jQuery plugin
@@ -49,5 +50,26 @@ $(document).ready(function() {
 		// itemsDesktopSmall : false,
 		// itemsTablet: false,
 		// itemsMobile : false
+	});
+
+	$("#go-top").click(function () {
+		$(document).scrollTo(0, 1000);
+	});
+
+	// 购物条目显示/隐藏
+	var cart_line_items_flag = 0;
+	$("#cart").click(function () {
+		if(cart_line_items_flag) {
+			$("#cart-line-items").hide();
+			cart_line_items_flag = 0;
+		} else {
+			$("#cart-line-items").show();
+			cart_line_items_flag = 1;
+		}
+		return false;
+	});
+	$(window).click(function () {
+		$("#cart-line-items").hide();
+		cart_line_items_flag = 0;
 	});
 });

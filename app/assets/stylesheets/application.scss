@@ -35,7 +35,7 @@ $thumbnail-padding: 0;
 $navbar-default-toggle-icon-bar-bg: $navbar-default-link-color;
 $navbar-default-toggle-hover-bg: darken($navbar-default-bg, 10%);
 
-$line-color: #ddd;
+$line-color: #eee;
 $pannel-color: #f8f8f8;
 
 @import "bootstrap-sprockets";
@@ -128,5 +128,51 @@ $pannel-color: #f8f8f8;
 	}
 	.slider {
 		padding-left: 15px;
+	}
+}
+
+// sidebar
+
+.sidebar-wrapper {
+	.sidebar {
+		position: fixed;
+		bottom: 15px;
+		right: 0;
+		margin-right: 15px;
+		border: 1px solid $line-color;
+		opacity: 0.7;
+		z-index: 999;
+		.cart, .top {
+			width: 50px;
+			height: 50px;
+			background-color: $pannel-color;
+			border-bottom: 1px solid $line-color;
+			text-align: center;
+			font-size: 1.3em;
+			line-height: 50px;
+			color: $brand-primary;
+			cursor: pointer;
+			&:hover {
+				background-color: darken($pannel-color,5%);
+				color: lighten($brand-primary,5%);
+			}
+		}
+		.top {
+			border-width: 0;
+		}
+		.cart {
+		}
+	}
+
+	#cart-line-items {
+		width: 300px;
+		min-height: 300px;
+		max-height: 400px;
+		position: fixed;
+		bottom: 67px;
+		right: 67px;
+		z-index: 999;
+		display: none;
+		background-color: red;
 	}
 }
