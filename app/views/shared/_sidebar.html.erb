@@ -1,12 +1,19 @@
 <div class="sidebar-wrapper">
   <div class="sidebar">
-    <div id="cart" class="cart">
-      <span class="glyphicon glyphicon-shopping-cart"></span>
-    </div>
+	<% if user_signed_in? %>
+	  <%= link_to cart_path(current_user.cart) do %>
+        <div id="cart" class="cart">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+	      <div class="point <%= current_user.cart.lineItems.count > 0 ? 'show' : 'hidden' %>"></div>
+        </div>
+	  <% end %>
+	<% end %>
   
     <div id="go-top" class="top">
       <span class="glyphicon glyphicon-menu-up"></span>
     </div>
+	<div data-no-turbolink>
+	</div>
   </div>
   
   <div id="cart-line-items">

@@ -52,6 +52,14 @@ $pannel-color: #f8f8f8;
 	-o-transition: $a $s;
 }
 
+@mixin myBorderRadius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+}
+
 @import "home";
 @import "products";
 @import "line_items";
@@ -161,6 +169,19 @@ $pannel-color: #f8f8f8;
 			border-width: 0;
 		}
 		.cart {
+			position: relative;
+			a:hover, a:link, a:active, a:visited {
+				color: lighten($brand-primary,5%);
+			}
+			.point {
+				position: absolute;
+				@include myBorderRadius(999px);
+				background-color: $brand-warning;
+				width: 10px;
+				height: 10px;
+				top: 5px;
+				right: 5px;
+			}
 		}
 	}
 

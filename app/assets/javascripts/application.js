@@ -57,6 +57,7 @@ $(document).ready(function() {
 	});
 
 	// 购物条目显示/隐藏
+	/*
 	var cart_line_items_flag = 0;
 	$("#cart").click(function () {
 		if(cart_line_items_flag) {
@@ -72,4 +73,5 @@ $(document).ready(function() {
 		$("#cart-line-items").hide();
 		cart_line_items_flag = 0;
 	});
+	*/
 });
