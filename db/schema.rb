@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014150708) do
+ActiveRecord::Schema.define(version: 20151025032838) do
 
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id"
@@ -63,6 +63,28 @@ ActiveRecord::Schema.define(version: 20151014150708) do
   add_index "looks", ["product_id"], name: "index_looks_on_product_id"
   add_index "looks", ["user_id"], name: "index_looks_on_user_id"
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.integer  "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "order_items", ["order_id"], name: "index_order_items_on_order_id"
+  add_index "order_items", ["product_id"], name: "index_order_items_on_product_id"
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "title"
+    t.decimal  "total"
+    t.integer  "state",       default: 0
+    t.integer  "pay_type",    default: 0
+    t.integer  "reciever_id"
+    t.integer  "user_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
   create_table "pictures", force: :cascade do |t|
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
@@ -88,6 +110,15 @@ ActiveRecord::Schema.define(version: 20151014150708) do
   end
 
   add_index "products", ["catalog_id"], name: "index_products_on_catalog_id"
+
+  create_table "recievers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "telephone"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

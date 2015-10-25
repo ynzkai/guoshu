@@ -22,12 +22,13 @@
   name
 
 # Order
-  state, total
+  state, title, total
 
 # OrderItem
+  product_id, count
 
 # Reciever
-  address, telephone, name
+  name, address, telephone, type
 
 # Cart
 

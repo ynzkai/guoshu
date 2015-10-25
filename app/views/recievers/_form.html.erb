@@ -1,0 +1,32 @@
+<%= form_for @reciever do |f| %>
+
+  <% if @reciever.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @reciever.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, '收货人' %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, '地址' %>
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :telephone, '联系电话' %>
+    <%= f.text_field :telephone, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit '确定->去付款', class: "btn btn-danger pull-right" %>
+  </div>
+<% end %>
+

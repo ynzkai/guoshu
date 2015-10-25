@@ -31,6 +31,15 @@ Rails.application.routes.draw do
 
   resources :line_items, only: [:create, :destroy]
 
+  resources :orders do
+    member do
+      post :recieve, to: "orders#recieve"
+      post :pay, to: "orders#pay"
+    end
+  end
+
+  resources :recievers
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

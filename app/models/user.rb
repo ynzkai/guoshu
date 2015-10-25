@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   has_one :cart, dependent: :destroy
+  has_one :reciever, dependent: :destroy
+  has_many :orders, dependent: :destroy
+
 
 
   alias_method :cart_base, :cart
