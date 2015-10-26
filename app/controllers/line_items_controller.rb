@@ -11,6 +11,7 @@ class LineItemsController < ApplicationController
     end
 
     respond_to do |format|
+      format.html { redirect_to cart_path(current_user.cart) }
       format.json
     end
 

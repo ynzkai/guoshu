@@ -1,10 +1,30 @@
 <div class="container">
-  <h1>Users#show</h1>
-  <p>Find me in app/views/users/show.html.erb</p>
+  <div class="row user-page">
+    <%= render "shared/navstrip" %>
+
+	<div class="col-md-9 user-content">
+	  <div class="myorder">
+	    <table class="table">
+	      <thead>
+	        <th>名称</th>
+	        <th>金额(元)</th>
+	        <th>状态</th>
+	        <th>时间</th>
+	      </thead>
+	      <tbody>
+	        <%= render @user.orders.reverse %>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
   
-  <ul>
-    <li><%= image_tag @user.avatar.url(:thumb), title: "用户头像" %></li>
-    <li><%= @user.username %></li>
-    <li><%= @user.email %></li>
-  </ul>
+	<div class="col-md-3 user-info">
+        <div><%= image_tag @user.avatar.url(:thumb), title: "用户头像" %></div>
+        <div>昵称: <%= @user.username %></div>
+        <div>邮箱: <%= @user.email %></div>
+		<div><%= link_to '修改头像', avatar_path %></div>
+		<div><%= link_to '修改资料', edit_user_registration_path %></div>
+      </ul>
+    </div>
+  </div>
 </div>
