@@ -1,7 +1,9 @@
 <div class="container">
-  <div class="row">
+  <div class="row pay">
+    <%= render "shared/navstrip" %>
+
 	<div class="col-md-4 col-md-offset-4 col-sm-12">
-		<h4>请选择付款方式:</h4>
+	  <h4 class="text-warning">请选择付款方式:</h4><br/>
 	  <%= form_for :order, url: pay_order_path(@order) do |f| %>
 		<div class="form-group">
 		  <%= f.label :pay_type do %>
@@ -9,9 +11,11 @@
 		  <% end %>
 		</div>
 
+	    <h5 class="text-danger">暂不支持支付宝付款</h5>
+
 	    <div class="form-group">
 		  <%= f.label :pay_type do %>
-		    <%= f.radio_button :pay_type, 1 %> <span>支付宝付款</span>
+		    <%= f.radio_button :pay_type, 1, disabled: true %> <span>支付宝付款</span>
 		  <% end %>
 		</div>
 
