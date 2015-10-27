@@ -4,7 +4,7 @@
 
 	<div class="pay col-md-4 col-md-offset-4 col-sm-12">
 	  <h4 class="text-warning">请选择付款方式:</h4><br/>
-	  <%= form_for :order, url: pay_order_path(@order) do |f| %>
+	  <%= form_for :order, url: paytype_order_path(@order) do |f| %>
 		<div class="form-group">
 		  <%= f.label :pay_type do %>
 		    <%= f.radio_button :pay_type, 0 %> <span>货到付款</span>

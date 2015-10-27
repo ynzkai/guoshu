@@ -34,7 +34,8 @@ Rails.application.routes.draw do
   resources :orders do
     member do
       post :recieve, to: "orders#recieve"
-      post :pay, to: "orders#pay"
+      post :paytype, to: "orders#paytype"
+      get :process, to: "orders#process_order"
     end
   end
 

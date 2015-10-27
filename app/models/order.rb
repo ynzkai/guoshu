@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :reciever
   belongs_to :user
 
-  STATE = %w(生成订单 填写收货人 等待付款 等待发货 确认收货 完成)
+  STATE = %w(生成订单 填写收货人 待付款 待发货 已发货 确认收货 完成)
 
   def state_name
     STATE[self.state]

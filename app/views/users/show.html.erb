@@ -4,12 +4,13 @@
 
 	<div class="col-md-9 user-content">
 	  <div class="myorder">
-	    <table class="table">
+	    <table class="table table-bordered table-hover">
 	      <thead>
 	        <th>名称</th>
 	        <th>金额(元)</th>
 	        <th>状态</th>
 	        <th>时间</th>
+		    <th>操作</th>
 	      </thead>
 	      <tbody>
 	        <%= render @user.orders.reverse %>

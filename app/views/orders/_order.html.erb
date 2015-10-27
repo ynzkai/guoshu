@@ -1,7 +1,11 @@
 <tr>
   <td><%= order.title %></td>
   <td><%= order.total %></td>
-  <td><%= order.state_name %></td>
+  <td id="order<%= order.id %>"><%= order.state_name %></td>
   <td><%= order.created_at %></td>
-  <td><%= link_to '处理', process_order_path(order.id) %></td>
+  <% if [3,4,5].include? order.state %>
+    <td><%= link_to '处理', process_order_path(order.id), remote: true unless order.state == 6 %></td>
+  <% else %>
+    <td><%= link_to '处理', process_order_path(order.id) unless order.state == 6 %></td>
+  <% end %>
 </tr>
