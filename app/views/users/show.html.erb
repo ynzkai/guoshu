@@ -22,18 +22,20 @@
 	  </div>
 	</div>
   
-	<div class="col-md-3 user-info">
-      <div><%= image_tag @user.avatar.url(:thumb), title: "用户头像" %></div>
-      <div>昵称: <%= @user.username %></div>
-      <div>邮箱: <%= @user.email %></div>
-	  <div><%= link_to '修改头像', avatar_path %></div>
-	  <div><%= link_to '修改资料', edit_user_registration_path %></div>
-    </div>
+	<div class="col-md-3">
+	  <div class="user-info">
+        <div><%= image_tag @user.avatar.url(:thumb), title: "用户头像" %></div>
+        <div>昵称: <%= @user.username %></div>
+        <div>邮箱: <%= @user.email %></div>
+	    <div><%= link_to '修改头像', avatar_path %></div>
+	    <div><%= link_to '修改资料', edit_user_registration_path %></div>
+      </div>
 
-	<div class="col-md-3 user-extra">
-	  <p>我喜欢的东西</p>
-	  <span class="like glyphicon glyphicon-heart"></span> 
-	  <span><%= @user.likes.count %></span>
-	</div>
+	  <div class="user-extra">
+	    <p>我喜欢的东西</p>
+	    <span class="like glyphicon glyphicon-heart"></span> 
+	    <span><%= @user.likes.count %></span>
+	  </div>
+    </div>
   </div>
 </div>

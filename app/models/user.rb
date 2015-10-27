@@ -24,4 +24,11 @@ class User < ActiveRecord::Base
   def cart
     self.cart_base || create_cart
   end
+
+  # 管理员
+  ADMINS = %w(admin@guoshu.com ynzkai@gmail.com)
+
+  def admin?
+    ADMINS.include?(self.email) ? true : false
+  end
 end
