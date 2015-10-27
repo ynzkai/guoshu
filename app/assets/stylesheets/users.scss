@@ -4,11 +4,22 @@
 
 .user-page {
 	color: darken($pannel-color, 60%);
-	.user-info {
+	.user-info, .user-extra {
 		padding: 15px;
 		background-color: #f8f8f8;
 		& > div {
 			padding: 5px 0;
+		}
+	}
+
+	.user-extra {
+		margin-top: 15px;
+		.like {
+			color: $brand-primary;
+		}
+		span {
+			padding-right: 10px;
+			font-size: 1.5em;
 		}
 	}
 }

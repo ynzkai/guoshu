@@ -8,3 +8,9 @@
 		color: darken($pannel-color, 60%);
 	}
 }
+
+.orders {
+	.order-title {
+		max-width: 250px;
+	}
+}

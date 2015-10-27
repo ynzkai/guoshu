@@ -3,9 +3,12 @@
     <%= render "shared/navstrip" %>
 
 	<div class="col-md-9 user-content">
+
+	  <div class="head-strip">我的订单</div>
 	  <div class="myorder">
-	    <table class="table table-bordered table-hover">
+	    <table class="orders table table-bordered table-hover">
 	      <thead>
+		    <th>ID</th>
 	        <th>名称</th>
 	        <th>金额(元)</th>
 	        <th>状态</th>
@@ -20,12 +23,17 @@
 	</div>
   
 	<div class="col-md-3 user-info">
-        <div><%= image_tag @user.avatar.url(:thumb), title: "用户头像" %></div>
-        <div>昵称: <%= @user.username %></div>
-        <div>邮箱: <%= @user.email %></div>
-		<div><%= link_to '修改头像', avatar_path %></div>
-		<div><%= link_to '修改资料', edit_user_registration_path %></div>
-      </ul>
+      <div><%= image_tag @user.avatar.url(:thumb), title: "用户头像" %></div>
+      <div>昵称: <%= @user.username %></div>
+      <div>邮箱: <%= @user.email %></div>
+	  <div><%= link_to '修改头像', avatar_path %></div>
+	  <div><%= link_to '修改资料', edit_user_registration_path %></div>
     </div>
+
+	<div class="col-md-3 user-extra">
+	  <p>我喜欢的东西</p>
+	  <span class="like glyphicon glyphicon-heart"></span> 
+	  <span><%= @user.likes.count %></span>
+	</div>
   </div>
 </div>

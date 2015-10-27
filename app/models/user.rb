@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   has_one :cart, dependent: :destroy
   has_one :reciever, dependent: :destroy
   has_many :orders, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
 
 
