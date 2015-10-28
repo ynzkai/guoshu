@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   before_action :authenticate_user!
+  load_and_authorize_resource :picture
 
   def new
     @picture = Picture.new product_id: params[:product_id]

@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  load_and_authorize_resource :order
 
   # 0生成订单 1填写收货人 2待付款 3待发货 4已发货 5确认收货 完成
   def process_order

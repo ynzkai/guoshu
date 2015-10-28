@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
   before_action :authenticate_user!
+  load_and_authorize_resource :line_item
 
   def create
     item = current_user.cart.lineItems.find_by product_id: params[:product_id]

@@ -14,7 +14,7 @@
 	<% if order.state == 4 %>
 	  <%= link_to '处理', process_order_path(order.id), remote: true, data: {confirm: '确定提交订单到下一环节？'} %>
     <% end %>
-	<% unless [3,5].include? order.state %>
+	<% unless [3,4,5,6].include? order.state %>
       <%= link_to '处理', process_order_path(order.id) %>
     <% end %>
   <% end %>

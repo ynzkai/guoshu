@@ -1,4 +1,6 @@
 class RecieversController < ApplicationController
+  load_and_authorize_resource :reciever
+
   def edit
   end
 

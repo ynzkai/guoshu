@@ -18,14 +18,11 @@
       </ul>
 	  <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
-		  <!--
-		  <li>
-		    <%= link_to cart_path(current_user.cart) do %>
-			  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-			  <span id="cart">购物车(<span id="cart_item_count"><%= current_user.cart.lineItems.count %></span>)</span>
-		    <% end %>
-		  </li>
-		  -->
+		<% if current_user.admin? %>
+		  <li><%= link_to '产品列表', products_path %></li>
+		  <li><%= link_to '增加产品', new_product_path %></li>
+		<% end %>
+
         <li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %> <span class="caret"></span></a>
           <ul class="dropdown-menu">

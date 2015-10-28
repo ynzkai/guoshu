@@ -1,5 +1,6 @@
 class CatalogsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :subcatalogs]
+  load_and_authorize_resource :catalog
 
   include CatalogsHelper
 
