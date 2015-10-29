@@ -92,8 +92,22 @@ $pannel-color: #f8f8f8;
 
 .foot {
 	background-color: lighten($gray-base, 5%);
-	height: 200px;
 	margin-top: 30px;
+	
+	.links {
+		color: #999;
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		padding: 15px 0;
+	}
+
+	.copyright {
+		color: #777;
+		text-align: center;
+		padding: 15px 0;
+	}
 }
 
 // responsive
