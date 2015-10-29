@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def index
     @q = Product.ransack(params[:q])
 
-    @products = Product.all
+    @products = Product.limit 4
     @catalogs = get_catalogs
   end
 end

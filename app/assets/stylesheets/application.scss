@@ -32,6 +32,9 @@ $navbar-default-link-active-color: #fff;
 $navbar-default-bg: #3c7e3c; //rgba(255,111,111,.5);
 $thumbnail-padding: 0;
 //$screen-sm: 481px;
+//$grid-gutter-width: 30px;
+$container-sm: 100%;
+
 $navbar-default-toggle-icon-bar-bg: $navbar-default-link-color;
 $navbar-default-toggle-hover-bg: darken($navbar-default-bg, 10%);
 
@@ -46,7 +49,7 @@ $pannel-color: #f8f8f8;
 
 @mixin myTransition($a, $s) {
 	transition: $a $s;
-	-webkit-transition:  $a $s;
+	-webkit-transition: $a $s;
 	-moz-transition: $a $s;
 	-ms-transition: $a $s;
 	-o-transition: $a $s;
@@ -96,6 +99,9 @@ $pannel-color: #f8f8f8;
 // responsive
 
 @media (max-width: $screen-sm-max) {
+	body {
+		font-size: 2.1em;
+	}
 	.head-bar {
 		height: auto;
 		.logo, .info {

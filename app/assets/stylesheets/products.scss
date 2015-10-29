@@ -53,6 +53,10 @@
 	border-color: darken($pannel-color, 5%);
 	overflow: hidden;
 
+	&:hover {
+		box-shadow: 0 3px 5px 1px darken($pannel-color, 15%);
+	}
+
 	.product-name, .product-price, .product-amount {
 		overflow: hidden;
 		height: 1.5em;
