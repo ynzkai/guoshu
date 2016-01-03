@@ -1,7 +1,7 @@
 # source 'https://ruby.taobao.org'
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -31,6 +31,8 @@ group :development do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'faker', '~> 1.5.0'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rvm'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
